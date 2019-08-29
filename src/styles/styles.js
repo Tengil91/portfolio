@@ -13,3 +13,4 @@ export let blogbarLinkStyles = {color: 'goldenrod'};
 export let blogbarListStyles = {listStyle: 'none', margin: 0, padding: 5}
 export let blogbarListItemStyles = {padding: 5};
 export let blogContentStyles = {minHeight: '100vh', width: '80%', margin: 'auto'};
+export let blogHomeLinkStyles = {position: 'fixed', top: 80, right: 80, color: '#fff', fontWeight: 'bold', fontSize: 32, backgroundColor: '#00000077'}

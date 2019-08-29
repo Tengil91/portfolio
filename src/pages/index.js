@@ -19,17 +19,20 @@ export default ({ data }) => {
       <Header headerText="Click on a project for more info" />
         <div style={{display: 'flex'}}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Link className="project-summary" to={node.fields.slug} style={{color: '#fff', textDecoration: 'none', width: '50%', padding: 10}}>
-              <h3>
-                {node.frontmatter.title}{" "}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.frontmatter.description}</p>
-            </Link>
+            <div style={{maxWidth: '50%', padding: 10}}>
+              <Link className="project-summary" to={node.fields.slug} style={{color: '#fff', textDecoration: 'none'}}>
+                <h3>
+                  {node.frontmatter.title}{" "}
+                  <span>
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
+                <p>{node.frontmatter.description}</p>
+              </Link>
+            </div>
           ))}
         </div>
+        <a href="mailto:kachiun91@gmail.com">Maila mig</a>
       </div>
     </div>
   )
