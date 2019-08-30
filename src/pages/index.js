@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Header from './../components/header';
+import Nav from '../components/nav'
 import { containerStyles, blogContentStyles } from '../styles/styles';
 import FullImageHeader from '../components/fullimageheader';
 import headerImg from './../images/headerimg2.jpg';
@@ -15,11 +16,12 @@ export default ({ data }) => {
         <h1 style={{color: '#fff', fontSize: 48}}>Welcome!</h1>
         <p style={{color: 'goldenrod', fontSize: 28}}>Here are a couple of my projects</p>
       </FullImageHeader>
+      <Nav />
       <div style={blogContentStyles}>
       <Header headerText="Click on a project for more info" />
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', flexWrap: 'wrap'}}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div style={{maxWidth: '50%', padding: 10}}>
+            <div style={{width: '50%', padding: 10}}>
               <Link className="project-summary" to={node.fields.slug} style={{color: '#fff', textDecoration: 'none'}}>
                 <h3>
                   {node.frontmatter.title}{" "}

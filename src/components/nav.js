@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { navbarStyles, navlinkStyles, navlistStyles } from '../styles/styles';
-let pages = [['Hem', '/'], ['Om sidan', '/about'], ['Kontakta mig', '/contact'], ['Blog', '/blog']];
+let pages = [['Home', '/'], ['About me', '/about-me']];
 export default () => (
   <nav>
     <ul style={navbarStyles}>
