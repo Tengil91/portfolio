@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import BlogPage from "../components/blogpage"
 import { blogHomeLinkStyles } from '../styles/styles'
+import CommentSection from '../components/commentsection';
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -14,6 +15,7 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <a href={post.frontmatter.githublink} target="_blank">Till githubsidan</a><br />
         <a href="mailto:kachiun91@gmail.com">Maila mig</a>
+        <CommentSection />
       </div>
     </BlogPage>
   )
