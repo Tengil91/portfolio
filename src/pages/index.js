@@ -5,6 +5,7 @@ import Nav from '../components/nav'
 import { containerStyles, blogContentStyles } from '../styles/styles';
 import FullImageHeader from '../components/fullimageheader';
 import headerImg from './../images/headerimg2.jpg';
+import CommentSection from '../components/commentsection';
 
 
 export default ({ data }) => {
@@ -35,6 +36,7 @@ export default ({ data }) => {
           ))}
         </div>
         <a href="mailto:kachiun91@gmail.com">Maila mig</a>
+        <CommentSection />
       </div>
     </div>
   )
